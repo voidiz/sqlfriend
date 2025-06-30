@@ -1,0 +1,17 @@
+[package]
+name = "sqlfriend-readline"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Error handling
+anyhow = { version = "1.0.80", features = ["backtrace"] }
+# Readline implementation
+rustyline = "14.0.0"
+rustyline-derive = "0.10.0"
+# REPL core
+sqlfriend-core = { path = "../core" }
+# Async
+tokio = { version = "1.39.2", features = ["full"] }

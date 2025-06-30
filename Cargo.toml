@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/readline"
+]
+default-members = [
+    "crates/core",
+    "crates/readline"
+]

@@ -1,0 +1,46 @@
+[package]
+name = "sqlfriend-core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Error handling
+anyhow = { version = "1.0.80", features = ["backtrace"] }
+# Diagnostics visualizer
+ariadne = "0.5.1"
+# Multi select dialogue
+dialoguer = "0.11.0"
+# JSON RPC types for LSP communication
+jsonrpsee-types = "0.24.1"
+# LSP types
+lsp-types = "0.95.1"
+# (De)serialization
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0"
+# SQL parser for syntax highlighting
+sqlparser = "0.43.1"
+# Async
+tokio = { version = "1.39.2", features = ["full"] }
+# Configuration file format
+toml = "0.8.19"
+# Cross-platform configuration directory
+dirs = "5.0.1"
+# Convenient error type generation
+thiserror = "1.0.65"
+# SQL drivers
+sqlx = { version = "0.8.2", features = ["runtime-tokio", "tls-native-tls", "postgres", "mysql", "sqlite", "chrono"] }
+# DB -> Rust type mappings for printing DB rows
+sqlx-core = "0.8.2"
+# Temporary files (creating a config file for postgrestools)
+tempfile = "3.20.0"
+
+
+[dependencies.uuid]
+version = "1.7.0"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
